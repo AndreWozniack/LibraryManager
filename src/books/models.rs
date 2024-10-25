@@ -1,9 +1,15 @@
+use serde::{Deserialize, Serialize};
 
-struct books {
-    title: String,
-    isbn: String,
-    author: String,
-    published: String,
-    pages: u32,
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Book {
+    pub title: String,
+    pub author: String,
+    pub pages: u32,
+}
 
+pub enum BookError {
+    IoError(std::io::Error),
+    JsonError(serde_json::Error),
+    BookNotFound,
+    BookAlreadyExists,
 }
