@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Dom Quixote",
+    "author": "Miguel de Cervantes",
+    "pages": 1605,
+    "is_borrowed": false
+  }
+]
